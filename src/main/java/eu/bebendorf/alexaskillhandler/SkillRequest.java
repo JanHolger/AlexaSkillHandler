@@ -67,6 +67,10 @@ public class SkillRequest {
                     return slot;
             return null;
         }
+        public boolean verifySlot(String name){
+            Slot slot = getSlot(name);
+            return !(slot==null||slot.getValue()==null);
+        }
     }
 
     @Getter
